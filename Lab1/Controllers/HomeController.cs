@@ -27,35 +27,10 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Calculator([FromQuery(Name ="operator")]Operators? op, double? a, double? b)
+    public IActionResult About()
     {
-        if (a == null || b == null)
-        {
-            return View("Error");
-        }
-        if (op == null)
-        {
-            return View("ErrorOp");
-        }
-        switch (op)
-        {
-            case Operators.add:
-                ViewBag.op = a + b;
-                break;
-            case Operators.mul:
-                ViewBag.op = a * b;
-                break;
-            case Operators.sub:
-                ViewBag.op = a - b;
-                break;
-            case Operators.div:
-                ViewBag.op = a / b;
-                break;
-        }
-        
         return View();
     }
-
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

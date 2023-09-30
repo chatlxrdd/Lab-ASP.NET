@@ -16,16 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/chatlxrd/Projects/Lab ASP.NET/Lab1
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Views/Home/Calculator.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DYWxjdWxhdG9yLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Views/Home/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Views/Home/ErrorOp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvck9wLmNzaHRtbA==
+[/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Views/Home/Index.cshtml]
