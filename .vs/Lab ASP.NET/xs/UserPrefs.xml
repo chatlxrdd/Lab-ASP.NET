@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{604EE3BE-059C-4A4F-BC67-3B71700EF411}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab1/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Lab1/Controllers/HomeController.cs" Line="55" Column="9" />
+      <File FileName="Lab1/Views/Home/Calculator.cshtml" Line="6" Column="19" />
+      <File FileName="Lab1/Views/Shared/_Layout.cshtml" Line="33" Column="19" />
+      <File FileName="Lab1/Views/Shared/Error.cshtml" Line="24" Column="28" />
+      <File FileName="Lab1/Views/Home/Error.cshtml" Line="7" Column="1" />
+      <File FileName="Lab1/Views/Home/ErrorOp.cshtml" Line="6" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Lab ASP.NET" expanded="True">
+            <Node name="Lab1" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Lab1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
