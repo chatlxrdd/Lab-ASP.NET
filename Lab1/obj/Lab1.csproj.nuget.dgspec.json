@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Lab1.csproj": {}
+    "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Lab1\\Lab1.csproj": {}
   },
   "projects": {
-    "/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Lab1.csproj": {
+    "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Lab1\\Lab1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Lab1.csproj",
+        "projectUniqueName": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Lab1\\Lab1.csproj",
         "projectName": "Lab1",
-        "projectPath": "/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/Lab1.csproj",
-        "packagesPath": "/Users/chatlxrd/.nuget/packages/",
-        "outputPath": "/Users/chatlxrd/Projects/Lab ASP.NET/Lab1/obj/",
+        "projectPath": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Lab1\\Lab1.csproj",
+        "packagesPath": "C:\\Users\\londo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Lab1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/chatlxrd/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\londo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.308/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.308/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
