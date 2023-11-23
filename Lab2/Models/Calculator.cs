@@ -1,39 +1,60 @@
-﻿namespace Lab2.Models;
-
-public class Calculator
+﻿using System;
+namespace Lab2.Models
 {
-    public string? Operator { get; set; }
-    public double? a { get; set; }
-    public double? b { get; set; }
-
-    public String Op
+    public class Calculator
     {
-        get
+        public Operators? Operator { get; set; }
+        public double? a { get; set; }
+        public double? b { get; set; }
+
+        public String Op
+        {
+            get
+            {
+                switch (Operator)
+                {
+                    case Operators.add:
+                        return "+";
+
+                    case Operators.sub:
+                        return "-";
+
+                    case Operators.mul:
+                        return "*";
+
+                    case Operators.div:
+                        return "/";
+
+                    default:
+                        return "";
+                }
+            }
+        }
+
+        public bool IsValid()
+        {
+            return Operator != null && a != null && b != null;
+        }
+
+        public double Calculate()
         {
             switch (Operator)
             {
-                case Operator.add:
-                    return "+";
-                    
-                default:
-                    return "";
+                case Operators.add:
+                    return (double)(a + b);
+
+                case Operators.sub:
+                    return (double)(a - b);
+
+                case Operators.mul:
+                    return (double)(a * b);
+
+                case Operators.div:
+                    return (double)(a / b);
+
+                default: return double.NaN;
             }
         }
     }
-
-    public bool IsValid()
-    {
-        return Operator != null && a != null && b != null;
-    }
-
-    public double Calculate()
-    {
-        switch (Operator)
-        {
-            case Operators.Add:
-                return (double)(a + b);
-                ...
-            default: return double.NaN;
-        }
-    }
 }
+

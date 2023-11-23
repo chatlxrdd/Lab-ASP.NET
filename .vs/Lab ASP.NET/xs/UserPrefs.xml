@@ -1,28 +1,34 @@
-﻿<Properties StartupConfiguration="{604EE3BE-059C-4A4F-BC67-3B71700EF411}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+﻿<Properties StartupConfiguration="{DB57DE5E-A69C-4B88-AA83-9853AD1D2EE5}|https">
+  <MonoDevelop.Ide.ItemProperties.Lab2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Lab1 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Lab2/Models/Calculator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BirthLab2/Views/Birth/Error.cshtml">
     <Files>
-      <File FileName="Lab2/Controllers/CalculatorController.cs" Line="13" Column="28" />
-      <File FileName="Lab2/Views/Calculator/Index.cshtml" Line="30" Column="7" />
-      <File FileName="Lab2/Views/Calculator/Result.cshtml" Line="7" Column="23" />
-      <File FileName="Lab2/Models/Calculator.cs" Line="31" Column="26" />
-      <File FileName="Lab1/Views/Home/Calculator.cshtml" Line="1" Column="1" />
-      <File FileName="Lab2/Views/Shared/_Layout.cshtml" Line="29" Column="115" />
+      <File FileName="BirthLab2/Models/Birth.cs" Line="20" Column="10" />
+      <File FileName="BirthLab2/Controllers/BirthController.cs" Line="31" Column="14" />
+      <File FileName="BirthLab2/Views/Birth/Birth.cshtml" Line="20" Column="1" />
+      <File FileName="BirthLab2/Views/Birth/Result.cshtml" Line="8" Column="1" />
+      <File FileName="BirthLab2/Views/Shared/_Layout.cshtml" Line="29" Column="111" />
+      <File FileName="BirthLab2/Views/Birth/Error.cshtml" Line="7" Column="65" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Lab ASP.NET" expanded="True">
-            <Node name="Lab2">
-              <Node name="Models" expanded="True">
-                <Node name="Calculator.cs" selected="True" />
+            <Node name="BirthLab2">
+              <Node name="Models" expanded="True" />
+              <Node name="Views">
+                <Node name="Birth">
+                  <Node name="Error.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
+            </Node>
+            <Node name="Lab2">
+              <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Calculator" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -30,8 +36,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.BirthLab2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Lab3 FirstBuild="True" />
 </Properties>

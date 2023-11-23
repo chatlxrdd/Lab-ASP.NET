@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/BirthLab2.props" />
+</Project>
