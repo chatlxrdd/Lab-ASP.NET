@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Computer>
+
+<h2>Lista komputerów</h2>
+
+<table class="table">
+    <tr>
+        <th>Nazwa</th>
+        <th>Procesor</th>
+        <th>Pamięć</th>
+        <th>Karta graficzna</th>
+        <th>Producent</th>
+        <th>Data produkcji</th>
+        <th>Akcje</th>
+    </tr>
+    @if (Model != null)
+    {
+        @foreach (var computer in Model)
+        {
+            <tr>
+                <td>@computer.Name</td>
+                <td>@computer.Processor</td>
+                <td>@computer.Memory</td>
+                <td>@computer.GraphicsCard</td>
+                <td>@computer.Manufacturer</td>
+                <td>@computer.ProductionDate.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@computer.Id" class="btn btn-primary">Edytuj</a>
+                    <a asp-action="Details" asp-route-id="@computer.Id" class="btn btn-secondary">Szczegóły</a>
+                    <a asp-action="Delete" asp-route-id="@computer.Id" class="btn btn-danger">Usuń</a>
+                </td>
+            </tr>
+        }
+    }
+    
+</table>

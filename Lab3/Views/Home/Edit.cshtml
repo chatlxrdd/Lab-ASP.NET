@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Computer
+
+<h2>Edycja komputera</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Name">Nazwa</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Processor">Procesor</label>
+        <input asp-for="Processor" class="form-control" />
+        <span asp-validation-for="Processor" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Memory">Pamięć RAM</label>
+        <input asp-for="Memory" class="form-control" />
+        <span asp-validation-for="Memory" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="GraphicsCard">Karta Graficzna</label>
+        <input asp-for="GraphicsCard" class="form-control" />
+        <span asp-validation-for="GraphicsCard" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Manufacturer">Producent</label>
+        <input asp-for="Manufacturer" class="form-control" />
+        <span asp-validation-for="Manufacturer" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ProductionDate">Data Produkcji</label>
+        <input asp-for="ProductionDate" class="form-control" />
+        <span asp-validation-for="ProductionDate" class="text-danger"></span>
+    </div>
+
+    <!-- Powtórz dla pozostałych pól: Processor, Memory, GraphicsCard, Manufacturer, ProductionDate -->
+
+    <button type="submit" class="btn btn-success">Zapisz zmiany</button>
+    <a asp-action="Index" class="btn btn-secondary">Powrót do listy</a>
+</form>
