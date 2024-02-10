@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Lab3.Models; // Upewnij się, że ta przestrzeń nazw zawiera klasy ComputerEntity i ManufacturerEntity
 using System;
 
 namespace Lab3.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext
     {
-        public DbSet<ComputerEntities> Computers { get; set; } // Użyj generycznego DbSet
-        public DbSet<ManufacturerEntities> Manufacturers { get; set; } // Użyj generycznego DbSet
+        public DbSet<ComputerEntities> Computers { get; set; }
+        public DbSet<ManufacturerEntities> Manufacturers { get; set; }
 
         private string DbPath { get; set; }
 
@@ -20,6 +21,14 @@ namespace Lab3.Data
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

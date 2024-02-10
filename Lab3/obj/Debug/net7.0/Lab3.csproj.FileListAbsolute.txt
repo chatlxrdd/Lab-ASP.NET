@@ -61,8 +61,10 @@ C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\runtimes\win-arm
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\obj\Debug\net7.0\Lab3.csproj.CopyComplete
-C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\obj\Debug\net7.0\Lab3.sourcelink.json
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\Humanizer.dll
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\londo\Desktop\STUDIA\Lab-ASP.NET\Lab3\obj\Debug\net7.0\Lab3.MvcApplicationPartsAssemblyInfo.cs
