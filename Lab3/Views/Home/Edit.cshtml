@@ -3,13 +3,10 @@
 *@
 @{
 }
-@model Computer
-
-<h2>Edycja komputera</h2>
+@model ComputerModel
 
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
-
+    <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Name">Nazwa</label>
         <input asp-for="Name" class="form-control" />
@@ -41,8 +38,5 @@
         <span asp-validation-for="ProductionDate" class="text-danger"></span>
     </div>
 
-    <!-- Powtórz dla pozostałych pól: Processor, Memory, GraphicsCard, Manufacturer, ProductionDate -->
-
-    <button type="submit" class="btn btn-success">Zapisz zmiany</button>
-    <a asp-action="Index" class="btn btn-secondary">Powrót do listy</a>
+    <button type="submit" class="btn btn-primary">Zapisz</button>
 </form>

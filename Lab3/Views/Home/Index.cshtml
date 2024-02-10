@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Computer>
+﻿@model IEnumerable<ComputerModel>
 
 <h2>Lista komputerów</h2>
 
@@ -12,24 +12,21 @@
         <th>Data produkcji</th>
         <th>Akcje</th>
     </tr>
-    @if (Model != null)
+
+    @foreach (var computer in Model)
     {
-        @foreach (var computer in Model)
-        {
-            <tr>
-                <td>@computer.Name</td>
-                <td>@computer.Processor</td>
-                <td>@computer.Memory</td>
-                <td>@computer.GraphicsCard</td>
-                <td>@computer.Manufacturer</td>
-                <td>@computer.ProductionDate.ToShortDateString()</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@computer.Id" class="btn btn-primary">Edytuj</a>
-                    <a asp-action="Details" asp-route-id="@computer.Id" class="btn btn-secondary">Szczegóły</a>
-                    <a asp-action="Delete" asp-route-id="@computer.Id" class="btn btn-danger">Usuń</a>
-                </td>
-            </tr>
-        }
+        <tr>
+            <td>@computer.Name</td>
+            <td>@computer.Processor</td>
+            <td>@computer.Memory</td>
+            <td>@computer.GraphicsCard</td>
+            <td>@computer.Manufacturer</td>
+            <td>@computer.ProductionDate.ToShortDateString()</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@computer.Id" class="btn btn-primary">Edytuj</a>
+                <a asp-action="Details" asp-route-id="@computer.Id" class="btn btn-secondary">Szczegóły</a>
+                <a asp-action="Delete" asp-route-id="@computer.Id" class="btn btn-danger">Usuń</a>
+            </td>
+        </tr>
     }
-    
 </table>

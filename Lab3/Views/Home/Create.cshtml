@@ -3,11 +3,10 @@
 *@
 @{
 }
-@model Computer
+@model ComputerModel
 
 <form asp-action="Create" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
-
+    <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Name">Nazwa</label>
         <input asp-for="Name" class="form-control" />
@@ -38,8 +37,5 @@
         <input asp-for="ProductionDate" class="form-control" />
         <span asp-validation-for="ProductionDate" class="text-danger"></span>
     </div>
-
-    <!-- Podobne sekcje dla Processor, Memory, GraphicsCard, Manufacturer, ProductionDate -->
-
     <button type="submit" class="btn btn-primary">Zapisz</button>
 </form>

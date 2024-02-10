@@ -1,12 +1,15 @@
-﻿using Lab3.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Lab3.Controllers
 {
+    using Lab3.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class HomeController : Controller
     {
-        private static List<Computer> _computers = new List<Computer>();
+        private static List<ComputerModel> _computers = new List<ComputerModel>();
 
         public IActionResult Index()
         {
@@ -20,7 +23,7 @@ namespace Lab3.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Computer computer)
+        public IActionResult Create(ComputerModel computer)
         {
             if (ModelState.IsValid)
             {
@@ -40,7 +43,7 @@ namespace Lab3.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Computer computer)
+        public IActionResult Edit(ComputerModel computer)
         {
             if (ModelState.IsValid)
             {
@@ -86,4 +89,5 @@ namespace Lab3.Controllers
             return View(computer);
         }
     }
+
 }
