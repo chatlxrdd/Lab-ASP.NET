@@ -1,0 +1,22 @@
+﻿@model Producer
+
+<div class="container">
+    <h2 class="mb-4">Szczegóły producenta</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Tytuł: @Model.Title</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Regon:</dt>
+                <dd class="col-sm-9">@Model.Regon</dd>
+                <dt class="col-sm-3">Nip:</dt>
+                <dd class="col-sm-9">@Model.Nip</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-primary">Powrót</a>
+    </div>
+</div>

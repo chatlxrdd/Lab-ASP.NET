@@ -1,0 +1,52 @@
+﻿@model Computer
+
+<h2>Nowy komputer</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <label asp-for="Name">Nazwa</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Processor">Procesor</label>
+        <input asp-for="Processor" class="form-control" />
+        <span asp-validation-for="Processor" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Memory">Pamięć</label>
+        <input asp-for="Memory" class="form-control" />
+        <span asp-validation-for="Memory" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="GraphicsCard">Karta Graficzna</label>
+        <input asp-for="GraphicsCard" class="form-control" />
+        <span asp-validation-for="GraphicsCard" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Manufacturer">Producent</label>
+        <input asp-for="Manufacturer" class="form-control" />
+        <span asp-validation-for="Manufacturer" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ProductionDate">Data Produkcji</label>
+        <input asp-for="ProductionDate" class="form-control" type="date" />
+        <span asp-validation-for="ProductionDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Priority">Stan</label>
+        <select asp-for="Priority" class="form-control">
+            <option value="Used">Używany</option>
+            <option value="NotUsed">Nie używany</option>
+            <option value="BrandNew">Nowy</option>
+        </select>
+        <span asp-validation-for="Priority" class="text-danger"></span>
+    </div>
+        <div class="form-group">
+        <label asp-for="ProducerId" class="control-label">Organizacja</label>
+        <select asp-for="ProducerId" class="form-control" asp-items="@Model.Producers"></select>
+        </div>
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+

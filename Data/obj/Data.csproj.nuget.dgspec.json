@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Data\\Data.csproj": {}
+    "C:\\Users\\londo\\Desktop\\Lab-ASPNET-master\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Data\\Data.csproj": {
+    "C:\\Users\\londo\\Desktop\\Lab-ASPNET-master\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\londo\\Desktop\\Lab-ASPNET-master\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\londo\\Desktop\\Lab-ASPNET-master\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\londo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\londo\\Desktop\\STUDIA\\Lab-ASP.NET\\Data\\obj\\",
+        "outputPath": "C:\\Users\\londo\\Desktop\\Lab-ASPNET-master\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\londo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,26 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.27, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,0 +1,27 @@
+﻿@model Producer
+
+<h2>Edycja komputera</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title" class="control-label">Nazwa:</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Regon" class="control-label">Regon:</label>
+        <input asp-for="Regon" class="form-control" />
+        <span asp-validation-for="Regon" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nip" class="control-label">Nip:</label>
+        <input asp-for="Nip" class="form-control" />
+        <span asp-validation-for="Nip" class="text-danger"></span>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+
+

@@ -1,0 +1,32 @@
+﻿@model Computer
+
+<div class="container">
+    <h2 class="mb-4">Szczegóły komputera</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Identyfikator: @Model.Id</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">Nazwa:</dt>
+                <dd class="col-sm-9">@Model.Name</dd>
+                <dt class="col-sm-3">Procesor:</dt>
+                <dd class="col-sm-9">@Model.Processor</dd>
+                <dt class="col-sm-3">Pamięć:</dt>
+                <dd class="col-sm-9">@Model.Memory</dd>
+                <dt class="col-sm-3">Karta Graficzna:</dt>
+                <dd class="col-sm-9">@Model.GraphicsCard</dd>
+                <dt class="col-sm-3">Producent:</dt>
+                <dd class="col-sm-9">@Model.Manufacturer</dd>
+                <dt class="col-sm-3">Data produkcji:</dt>
+                <dd class="col-sm-9">@Model.ProductionDate.ToShortDateString()</dd>
+                <dt class="col-sm-3">Stan:</dt>
+                <dd class="col-sm-9">@Model.Priority</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-primary">Powrót</a>
+    </div>
+</div>

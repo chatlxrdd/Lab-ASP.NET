@@ -1,0 +1,27 @@
+﻿@model List<Producer>
+<h2>Lista producentów</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model[0].Id)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Title)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Regon)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Nip)</th>
+            <th>Akcje</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td>@item.Regon</td>
+                        <td>@item.Nip</td>
+                        <td>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Szczegóły</a>
+                        </td>
+                    </tr>
+        }
+    </tbody>
+</table>

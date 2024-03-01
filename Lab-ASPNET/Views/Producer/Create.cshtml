@@ -1,0 +1,25 @@
+﻿@model Producer
+
+<h2>Nowy komputer</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div>
+        <label asp-for="Title">Nazwa</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Regon">Regon</label>
+        <input asp-for="Regon" class="form-control" />
+        <span asp-validation-for="Regon" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Nip">Nip</label>
+        <input asp-for="Nip" class="form-control" />
+        <span asp-validation-for="Nip" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+
+               

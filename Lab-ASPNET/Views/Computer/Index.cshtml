@@ -1,0 +1,107 @@
+﻿@model List<Computer>
+
+<h2>Lista komputerów</h2>
+
+<div class="row mb-3">
+    <div class="col-md-1">
+        <label for="filterId" class="form-label">ID:</label>
+        <input type="text" class="form-control" id="filterId">
+    </div>
+<div class="col-md-2">
+    <label for="filterName" class="form-label">Nazwa:</label>
+    <input type="text" class="form-control" id="filterName">
+    <select class="form-control mt-2" id="filterType">
+        <option value="">Pokaż wszystkie</option>
+        <option value="GamerComputer">GamerComputer</option>
+        <option value="OfficeComputer">OfficeComputer</option>
+        <option value="LongLifeComputer">LongLifeComputer</option>
+    </select>
+</div>
+    <div class="col-md-2">
+        <label for="filterProcessor" class="form-label">Procesor:</label>
+        <input type="text" class="form-control" id="filterProcessor">
+    </div>
+    <div class="col-md-2">
+        <label for="filterMemory" class="form-label">Pamięć:</label>
+        <input type="text" class="form-control" id="filterMemory">
+    </div>
+    <div class="col-md-2">
+        <label for="filterGraphicsCard" class="form-label">Karta graficzna:</label>
+        <input type="text" class="form-control" id="filterGraphicsCard">
+    </div>
+    <div class="col-md-2">
+        <label for="filterManufacturer" class="form-label">Producent:</label>
+        <input type="text" class="form-control" id="filterManufacturer">
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model[0].Id)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Name)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Processor)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Memory)</th>
+            <th>@Html.DisplayNameFor(model => model[0].GraphicsCard)</th>
+            <th>@Html.DisplayNameFor(model => model[0].Manufacturer)</th>
+            <th>Akcje</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Processor</td>
+                    <td>@item.Memory</td>
+                    <td>@item.GraphicsCard</td>
+                    <td>@item.Manufacturer</td>
+                    <td>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Szczegóły</a>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary">Edytuj</a>
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display: inline;">
+                                <button type="submit" class="btn btn-danger">Usuń</button>
+                        </form>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        function filterComputers() {
+            var filterId = $("#filterId").val().toLowerCase();
+            var filterName = $("#filterName").val().toLowerCase();
+            var filterProcessor = $("#filterProcessor").val().toLowerCase();
+            var filterMemory = $("#filterMemory").val().toLowerCase();
+            var filterGraphicsCard = $("#filterGraphicsCard").val().toLowerCase();
+            var filterManufacturer = $("#filterManufacturer").val().toLowerCase();
+            var filterType = $("#filterType").val().toLowerCase();
+
+            $("tbody tr").filter(function () {
+                var id = $(this).find("td:nth-child(1)").text().toLowerCase();
+                var name = $(this).find("td:nth-child(2)").text().toLowerCase();
+                var processor = $(this).find("td:nth-child(3)").text().toLowerCase();
+                var memory = $(this).find("td:nth-child(4)").text().toLowerCase();
+                var graphicsCard = $(this).find("td:nth-child(5)").text().toLowerCase();
+                var manufacturer = $(this).find("td:nth-child(6)").text().toLowerCase();
+
+                var idMatch = id.includes(filterId) || filterId === "";
+                var nameMatch = name.includes(filterName) || filterName === "";
+                var processorMatch = processor.includes(filterProcessor) || filterProcessor === "";
+                var memoryMatch = memory.includes(filterMemory) || filterMemory === "";
+                var graphicsCardMatch = graphicsCard.includes(filterGraphicsCard) || filterGraphicsCard === "";
+                var manufacturerMatch = manufacturer.includes(filterManufacturer) || filterManufacturer === "";
+                var typeMatch = filterType === "" || filterType === "pokaż wszystkie" || name.toLowerCase().includes(filterType);
+
+                $(this).toggle(idMatch && nameMatch && processorMatch && memoryMatch && graphicsCardMatch && manufacturerMatch && typeMatch);
+            });
+        }
+
+        $(document).ready(function () {
+            $("#filterId, #filterName, #filterProcessor, #filterMemory, #filterGraphicsCard, #filterManufacturer, #filterType").on("keyup change", filterComputers);
+        });
+    </script>
+    }

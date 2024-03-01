@@ -1,0 +1,38 @@
+﻿@model Producer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Napewno chcesz usunąć urządzenie??</h3>
+<div>
+    <h4>Dane</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nip)
+        </dd>
+    </dl>
+
+    <form asp-controller="Producer" asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Usuń</button>
+        <a asp-action="Index" class="btn btn-primary">Anuluj</a>
+    </form>
+</div>       
+
